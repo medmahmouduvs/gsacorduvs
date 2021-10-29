@@ -36,7 +36,7 @@ module.exports = (config, options, targetOptions) => {
         extensions: ['js', 'ts'],
       }),
       new WebpackNotifierPlugin({
-        title: 'Gsacorduvs',
+        title: 'Gestion Des Accords',
         contentImage: path.join(__dirname, 'logo-jhipster.png'),
       })
     );
