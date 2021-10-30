@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="etablisUser">
+      <h2 data-cy="etablisUserDetailsHeading"><span jhiTranslate="gsacorduvsApp.etablisUser.detail.title">Etablis User</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ etablisUser.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.nome">Nome</span></dt>
+        <dd>
+          <span>{{ etablisUser.nome }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.email">Email</span></dt>
+        <dd>
+          <span>{{ etablisUser.email }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.position">Position</span></dt>
+        <dd>
+          <span>{{ etablisUser.position }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.username">Username</span></dt>
+        <dd>
+          <span>{{ etablisUser.username }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.password">Password</span></dt>
+        <dd>
+          <span>{{ etablisUser.password }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisUser.internalUser">Internal User</span></dt>
+        <dd>
+          <span>{{ etablisUser.internalUser?.id }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/etablis-user', etablisUser.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

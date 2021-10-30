@@ -1,0 +1,97 @@
+
+
+
+entity EtablisemntParten{
+
+contry String,
+nameEtab String,
+domain String,
+mention String,
+representantname String
+}
+
+entity EspaceAcEtEl{
+name String required,
+handle String required
+}
+
+entity Accorde{
+
+titre String,
+teritornature Teritoir,
+statusacord Statueoption,
+dateAccord LocalDate,
+
+signaturereacteru Boolean,
+signatureDiircore  Boolean,
+signatureChefEtab Boolean,
+article String
+}
+
+ entity DemandElaboration {
+
+    typeAccord TypeAccord,
+    titreDemand String,
+    dateDeman LocalDate ,
+    formeAccord String,
+    signaturedircoor Boolean
+
+}
+
+
+entity EtudeAccord {
+
+	titre String,
+    dateEtude LocalDate ,
+    motiveDirCoor String,
+   signaturereacteru Boolean,
+	signatureDiircore  Boolean,
+	signatureChefEtab Boolean,
+}
+entity EtablisUser{
+nome String,
+email String,
+position String,
+username String,
+password String
+
+}
+relationship OneToOne {
+  EtablisUser{internalUser} to User
+}
+
+enum Teritoir{
+INTERNATIONAL, NATIONAL, TRIPARTIE, MULTIPARTIE
+}
+enum Statueoption{
+PROGRAMEE, DEROULEE, FINI
+}
+enum TypeAccord{
+ACCORD, AVENNANT
+}
+
+relationship ManyToMany{
+Accorde{etablisemntParten(nameEtab)} to EtablisemntParten{accorde},
+
+DemandElaboration{etablisemntParten(nameEtab)} to EtablisemntParten{demandElaboration},
+
+EtudeAccord{accorde(id)} to Accorde{etudeAccord}
+
+}
+
+relationship ManyToOne {
+
+  EtudeAccord{espaceAcEtEl(name)} to EspaceAcEtEl,
+  Accorde{espaceAcEtEl(name)} to EspaceAcEtEl,
+  DemandElaboration{espaceAcEtEl(name)} to EspaceAcEtEl,
+  EspaceAcEtEl{user(login)} to User
+}
+
+paginate Accorde, EtudeAccord, DemandElaboration, EtablisemntParten with infinite-scroll
+
+
+
+
+
+
+

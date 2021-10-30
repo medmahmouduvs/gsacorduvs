@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Accorde.
+    -->
+    <changeSet id="20211030132111-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="espace_ac_et_el_id"
+                                 baseTableName="accorde"
+                                 constraintName="fk_accorde__espace_ac_et_el_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="espace_ac_et_el"/>
+
+        <addForeignKeyConstraint baseColumnNames="accorde_id"
+                                 baseTableName="rel_accorde__etablisemnt_parten"
+                                 constraintName="fk_rel_accorde__etablisemnt_parten__accorde_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="accorde"/>
+
+        <addForeignKeyConstraint baseColumnNames="etablisemnt_parten_id"
+                                 baseTableName="rel_accorde__etablisemnt_parten"
+                                 constraintName="fk_rel_accorde__etablisemnt_parten__etablisemnt_parten_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="etablisemnt_parten"/>
+    </changeSet>
+</databaseChangeLog>

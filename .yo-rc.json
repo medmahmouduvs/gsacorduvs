@@ -42,6 +42,8 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "entities": ["EtablisemntParten", "EspaceAcEtEl", "Accorde", "DemandElaboration", "EtudeAccord", "EtablisUser"],
+    "lastLiquibaseTimestamp": 1635606897000
   }
 }

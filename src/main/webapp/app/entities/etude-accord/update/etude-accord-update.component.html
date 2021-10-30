@@ -1,0 +1,149 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-etude-accord-heading"
+        data-cy="EtudeAccordCreateUpdateHeading"
+        jhiTranslate="gsacorduvsApp.etudeAccord.home.createOrEditLabel"
+      >
+        Create or edit a Etude Accord
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.titre" for="field_titre">Titre</label>
+          <input type="text" class="form-control" name="titre" id="field_titre" data-cy="titre" formControlName="titre" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.dateEtude" for="field_dateEtude">Date Etude</label>
+          <div class="input-group">
+            <input
+              id="field_dateEtude"
+              data-cy="dateEtude"
+              type="text"
+              class="form-control"
+              name="dateEtude"
+              ngbDatepicker
+              #dateEtudeDp="ngbDatepicker"
+              formControlName="dateEtude"
+            />
+            <span class="input-group-append">
+              <button type="button" class="btn btn-secondary" (click)="dateEtudeDp.toggle()">
+                <fa-icon icon="calendar-alt"></fa-icon>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.motiveDirCoor" for="field_motiveDirCoor"
+            >Motive Dir Coor</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="motiveDirCoor"
+            id="field_motiveDirCoor"
+            data-cy="motiveDirCoor"
+            formControlName="motiveDirCoor"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.signaturereacteru" for="field_signaturereacteru"
+            >Signaturereacteru</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="signaturereacteru"
+            id="field_signaturereacteru"
+            data-cy="signaturereacteru"
+            formControlName="signaturereacteru"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.signatureDiircore" for="field_signatureDiircore"
+            >Signature Diircore</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="signatureDiircore"
+            id="field_signatureDiircore"
+            data-cy="signatureDiircore"
+            formControlName="signatureDiircore"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.signatureChefEtab" for="field_signatureChefEtab"
+            >Signature Chef Etab</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="signatureChefEtab"
+            id="field_signatureChefEtab"
+            data-cy="signatureChefEtab"
+            formControlName="signatureChefEtab"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.etudeAccord.espaceAcEtEl" for="field_espaceAcEtEl"
+            >Espace Ac Et El</label
+          >
+          <select class="form-control" id="field_espaceAcEtEl" data-cy="espaceAcEtEl" name="espaceAcEtEl" formControlName="espaceAcEtEl">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                espaceAcEtElOption.id === editForm.get('espaceAcEtEl')!.value?.id ? editForm.get('espaceAcEtEl')!.value : espaceAcEtElOption
+              "
+              *ngFor="let espaceAcEtElOption of espaceAcEtElsSharedCollection; trackBy: trackEspaceAcEtElById"
+            >
+              {{ espaceAcEtElOption.name }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label jhiTranslate="gsacorduvsApp.etudeAccord.accorde" for="field_accordes">Accorde</label>
+          <select class="form-control" id="field_accordes" data-cy="accorde" multiple name="accordes" formControlName="accordes">
+            <option
+              [ngValue]="getSelectedAccorde(accordeOption, editForm.get('accordes')!.value)"
+              *ngFor="let accordeOption of accordesSharedCollection; trackBy: trackAccordeById"
+            >
+              {{ accordeOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

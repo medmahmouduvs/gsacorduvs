@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="accorde">
+      <h2 data-cy="accordeDetailsHeading"><span jhiTranslate="gsacorduvsApp.accorde.detail.title">Accorde</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ accorde.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.titre">Titre</span></dt>
+        <dd>
+          <span>{{ accorde.titre }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.teritornature">Teritornature</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'gsacorduvsApp.Teritoir.' + accorde.teritornature }}">{{ accorde.teritornature }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.statusacord">Statusacord</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'gsacorduvsApp.Statueoption.' + accorde.statusacord }}">{{ accorde.statusacord }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.dateAccord">Date Accord</span></dt>
+        <dd>
+          <span>{{ accorde.dateAccord | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.signaturereacteru">Signaturereacteru</span></dt>
+        <dd>
+          <span>{{ accorde.signaturereacteru }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.signatureDiircore">Signature Diircore</span></dt>
+        <dd>
+          <span>{{ accorde.signatureDiircore }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.signatureChefEtab">Signature Chef Etab</span></dt>
+        <dd>
+          <span>{{ accorde.signatureChefEtab }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.article">Article</span></dt>
+        <dd>
+          <span>{{ accorde.article }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.espaceAcEtEl">Espace Ac Et El</span></dt>
+        <dd>
+          <div *ngIf="accorde.espaceAcEtEl">
+            <a [routerLink]="['/espace-ac-et-el', accorde.espaceAcEtEl?.id, 'view']">{{ accorde.espaceAcEtEl?.name }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.accorde.etablisemntParten">Etablisemnt Parten</span></dt>
+        <dd>
+          <span *ngFor="let etablisemntParten of accorde.etablisemntPartens; let last = last">
+            <a [routerLink]="['/etablisemnt-parten', etablisemntParten?.id, 'view']">{{ etablisemntParten.nameEtab }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/accorde', accorde.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

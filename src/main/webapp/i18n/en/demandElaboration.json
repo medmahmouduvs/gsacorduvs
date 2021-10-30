@@ -1,0 +1,30 @@
+{
+  "gsacorduvsApp": {
+    "demandElaboration": {
+      "home": {
+        "title": "Demand Elaborations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Demand Elaboration",
+        "createOrEditLabel": "Create or edit a Demand Elaboration",
+        "notFound": "No Demand Elaborations found"
+      },
+      "created": "A new Demand Elaboration is created with identifier {{ param }}",
+      "updated": "A Demand Elaboration is updated with identifier {{ param }}",
+      "deleted": "A Demand Elaboration is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Demand Elaboration {{ id }}?"
+      },
+      "detail": {
+        "title": "Demand Elaboration"
+      },
+      "id": "ID",
+      "typeAccord": "Type Accord",
+      "titreDemand": "Titre Demand",
+      "dateDeman": "Date Deman",
+      "formeAccord": "Forme Accord",
+      "signaturedircoor": "Signaturedircoor",
+      "espaceAcEtEl": "Espace Ac Et El",
+      "etablisemntParten": "Etablisemnt Parten"
+    }
+  }
+}

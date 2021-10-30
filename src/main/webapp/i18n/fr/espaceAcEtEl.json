@@ -1,0 +1,26 @@
+{
+  "gsacorduvsApp": {
+    "espaceAcEtEl": {
+      "home": {
+        "title": "EspaceAcEtEls",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Espace Ac Et El",
+        "createOrEditLabel": "Créer ou éditer un Espace Ac Et El",
+        "notFound": "Aucun Espace Ac Et El trouvé"
+      },
+      "created": "Un nouveau Espace Ac Et El a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Espace Ac Et El avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Espace Ac Et El avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Espace Ac Et El {{ id }} ?"
+      },
+      "detail": {
+        "title": "Espace Ac Et El"
+      },
+      "id": "ID",
+      "name": "Name",
+      "handle": "Handle",
+      "user": "User"
+    }
+  }
+}

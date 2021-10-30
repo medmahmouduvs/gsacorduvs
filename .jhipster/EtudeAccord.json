@@ -1,0 +1,56 @@
+{
+  "name": "EtudeAccord",
+  "fields": [
+    {
+      "fieldName": "titre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateEtude",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "motiveDirCoor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "signaturereacteru",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "signatureDiircore",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "signatureChefEtab",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "espaceAcEtEl",
+      "otherEntityRelationshipName": "etudeAccord",
+      "relationshipName": "espaceAcEtEl",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "accorde",
+      "otherEntityRelationshipName": "etudeAccord",
+      "relationshipName": "accorde",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "etude_accord",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20211030132113"
+}

@@ -1,0 +1,150 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-demand-elaboration-heading"
+        data-cy="DemandElaborationCreateUpdateHeading"
+        jhiTranslate="gsacorduvsApp.demandElaboration.home.createOrEditLabel"
+      >
+        Create or edit a Demand Elaboration
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.typeAccord" for="field_typeAccord"
+            >Type Accord</label
+          >
+          <select class="form-control" name="typeAccord" formControlName="typeAccord" id="field_typeAccord" data-cy="typeAccord">
+            <option [ngValue]="null">{{ 'gsacorduvsApp.TypeAccord.null' | translate }}</option>
+            <option value="ACCORD">{{ 'gsacorduvsApp.TypeAccord.ACCORD' | translate }}</option>
+            <option value="AVENNANT">{{ 'gsacorduvsApp.TypeAccord.AVENNANT' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.titreDemand" for="field_titreDemand"
+            >Titre Demand</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="titreDemand"
+            id="field_titreDemand"
+            data-cy="titreDemand"
+            formControlName="titreDemand"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.dateDeman" for="field_dateDeman"
+            >Date Deman</label
+          >
+          <div class="input-group">
+            <input
+              id="field_dateDeman"
+              data-cy="dateDeman"
+              type="text"
+              class="form-control"
+              name="dateDeman"
+              ngbDatepicker
+              #dateDemanDp="ngbDatepicker"
+              formControlName="dateDeman"
+            />
+            <span class="input-group-append">
+              <button type="button" class="btn btn-secondary" (click)="dateDemanDp.toggle()">
+                <fa-icon icon="calendar-alt"></fa-icon>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.formeAccord" for="field_formeAccord"
+            >Forme Accord</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="formeAccord"
+            id="field_formeAccord"
+            data-cy="formeAccord"
+            formControlName="formeAccord"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.signaturedircoor" for="field_signaturedircoor"
+            >Signaturedircoor</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="signaturedircoor"
+            id="field_signaturedircoor"
+            data-cy="signaturedircoor"
+            formControlName="signaturedircoor"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="gsacorduvsApp.demandElaboration.espaceAcEtEl" for="field_espaceAcEtEl"
+            >Espace Ac Et El</label
+          >
+          <select class="form-control" id="field_espaceAcEtEl" data-cy="espaceAcEtEl" name="espaceAcEtEl" formControlName="espaceAcEtEl">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                espaceAcEtElOption.id === editForm.get('espaceAcEtEl')!.value?.id ? editForm.get('espaceAcEtEl')!.value : espaceAcEtElOption
+              "
+              *ngFor="let espaceAcEtElOption of espaceAcEtElsSharedCollection; trackBy: trackEspaceAcEtElById"
+            >
+              {{ espaceAcEtElOption.name }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label jhiTranslate="gsacorduvsApp.demandElaboration.etablisemntParten" for="field_etablisemntPartens">Etablisemnt Parten</label>
+          <select
+            class="form-control"
+            id="field_etablisemntPartens"
+            data-cy="etablisemntParten"
+            multiple
+            name="etablisemntPartens"
+            formControlName="etablisemntPartens"
+          >
+            <option
+              [ngValue]="getSelectedEtablisemntParten(etablisemntPartenOption, editForm.get('etablisemntPartens')!.value)"
+              *ngFor="let etablisemntPartenOption of etablisemntPartensSharedCollection; trackBy: trackEtablisemntPartenById"
+            >
+              {{ etablisemntPartenOption.nameEtab }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

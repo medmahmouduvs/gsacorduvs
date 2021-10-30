@@ -1,0 +1,11 @@
+{
+  "gsacorduvsApp": {
+    "Teritoir": {
+      "null": "",
+      "INTERNATIONAL": "INTERNATIONAL",
+      "NATIONAL": "NATIONAL",
+      "TRIPARTIE": "TRIPARTIE",
+      "MULTIPARTIE": "MULTIPARTIE"
+    }
+  }
+}

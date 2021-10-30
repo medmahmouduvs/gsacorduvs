@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="demandElaboration">
+      <h2 data-cy="demandElaborationDetailsHeading">
+        <span jhiTranslate="gsacorduvsApp.demandElaboration.detail.title">Demand Elaboration</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ demandElaboration.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.typeAccord">Type Accord</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'gsacorduvsApp.TypeAccord.' + demandElaboration.typeAccord }}">{{ demandElaboration.typeAccord }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.titreDemand">Titre Demand</span></dt>
+        <dd>
+          <span>{{ demandElaboration.titreDemand }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.dateDeman">Date Deman</span></dt>
+        <dd>
+          <span>{{ demandElaboration.dateDeman | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.formeAccord">Forme Accord</span></dt>
+        <dd>
+          <span>{{ demandElaboration.formeAccord }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.signaturedircoor">Signaturedircoor</span></dt>
+        <dd>
+          <span>{{ demandElaboration.signaturedircoor }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.espaceAcEtEl">Espace Ac Et El</span></dt>
+        <dd>
+          <div *ngIf="demandElaboration.espaceAcEtEl">
+            <a [routerLink]="['/espace-ac-et-el', demandElaboration.espaceAcEtEl?.id, 'view']">{{
+              demandElaboration.espaceAcEtEl?.name
+            }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.demandElaboration.etablisemntParten">Etablisemnt Parten</span></dt>
+        <dd>
+          <span *ngFor="let etablisemntParten of demandElaboration.etablisemntPartens; let last = last">
+            <a [routerLink]="['/etablisemnt-parten', etablisemntParten?.id, 'view']">{{ etablisemntParten.nameEtab }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/demand-elaboration', demandElaboration.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

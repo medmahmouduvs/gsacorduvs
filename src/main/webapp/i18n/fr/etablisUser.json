@@ -1,0 +1,29 @@
+{
+  "gsacorduvsApp": {
+    "etablisUser": {
+      "home": {
+        "title": "EtablisUsers",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Etablis User",
+        "createOrEditLabel": "Créer ou éditer un Etablis User",
+        "notFound": "Aucun Etablis User trouvé"
+      },
+      "created": "Un nouveau Etablis User a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Etablis User avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Etablis User avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Etablis User {{ id }} ?"
+      },
+      "detail": {
+        "title": "Etablis User"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "email": "Email",
+      "position": "Position",
+      "username": "Username",
+      "password": "Password",
+      "internalUser": "Internal User"
+    }
+  }
+}

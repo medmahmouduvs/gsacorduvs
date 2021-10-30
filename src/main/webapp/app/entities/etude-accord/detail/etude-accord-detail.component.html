@@ -1,0 +1,65 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="etudeAccord">
+      <h2 data-cy="etudeAccordDetailsHeading"><span jhiTranslate="gsacorduvsApp.etudeAccord.detail.title">Etude Accord</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ etudeAccord.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.titre">Titre</span></dt>
+        <dd>
+          <span>{{ etudeAccord.titre }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.dateEtude">Date Etude</span></dt>
+        <dd>
+          <span>{{ etudeAccord.dateEtude | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.motiveDirCoor">Motive Dir Coor</span></dt>
+        <dd>
+          <span>{{ etudeAccord.motiveDirCoor }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.signaturereacteru">Signaturereacteru</span></dt>
+        <dd>
+          <span>{{ etudeAccord.signaturereacteru }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.signatureDiircore">Signature Diircore</span></dt>
+        <dd>
+          <span>{{ etudeAccord.signatureDiircore }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.signatureChefEtab">Signature Chef Etab</span></dt>
+        <dd>
+          <span>{{ etudeAccord.signatureChefEtab }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.espaceAcEtEl">Espace Ac Et El</span></dt>
+        <dd>
+          <div *ngIf="etudeAccord.espaceAcEtEl">
+            <a [routerLink]="['/espace-ac-et-el', etudeAccord.espaceAcEtEl?.id, 'view']">{{ etudeAccord.espaceAcEtEl?.name }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etudeAccord.accorde">Accorde</span></dt>
+        <dd>
+          <span *ngFor="let accorde of etudeAccord.accordes; let last = last">
+            <a [routerLink]="['/accorde', accorde?.id, 'view']">{{ accorde.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/etude-accord', etudeAccord.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

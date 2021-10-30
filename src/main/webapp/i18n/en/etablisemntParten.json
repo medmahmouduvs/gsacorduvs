@@ -1,0 +1,30 @@
+{
+  "gsacorduvsApp": {
+    "etablisemntParten": {
+      "home": {
+        "title": "Etablisemnt Partens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Etablisemnt Parten",
+        "createOrEditLabel": "Create or edit a Etablisemnt Parten",
+        "notFound": "No Etablisemnt Partens found"
+      },
+      "created": "A new Etablisemnt Parten is created with identifier {{ param }}",
+      "updated": "A Etablisemnt Parten is updated with identifier {{ param }}",
+      "deleted": "A Etablisemnt Parten is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Etablisemnt Parten {{ id }}?"
+      },
+      "detail": {
+        "title": "Etablisemnt Parten"
+      },
+      "id": "ID",
+      "contry": "Contry",
+      "nameEtab": "Name Etab",
+      "domain": "Domain",
+      "mention": "Mention",
+      "representantname": "Representantname",
+      "accorde": "Accorde",
+      "demandElaboration": "Demand Elaboration"
+    }
+  }
+}

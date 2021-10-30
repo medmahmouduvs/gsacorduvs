@@ -1,0 +1,73 @@
+{
+  "name": "Accorde",
+  "fields": [
+    {
+      "fieldName": "titre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teritornature",
+      "fieldType": "Teritoir",
+      "fieldValues": "INTERNATIONAL,NATIONAL,TRIPARTIE,MULTIPARTIE"
+    },
+    {
+      "fieldName": "statusacord",
+      "fieldType": "Statueoption",
+      "fieldValues": "PROGRAMEE,DEROULEE,FINI"
+    },
+    {
+      "fieldName": "dateAccord",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "signaturereacteru",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "signatureDiircore",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "signatureChefEtab",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "article",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "espaceAcEtEl",
+      "otherEntityRelationshipName": "accorde",
+      "relationshipName": "espaceAcEtEl",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "etablisemntParten",
+      "otherEntityRelationshipName": "accorde",
+      "relationshipName": "etablisemntParten",
+      "otherEntityField": "nameEtab",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "etudeAccord",
+      "otherEntityRelationshipName": "accorde",
+      "relationshipName": "etudeAccord",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "accorde",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20211030132111"
+}

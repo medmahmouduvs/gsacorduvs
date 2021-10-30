@@ -1,0 +1,34 @@
+{
+  "gsacorduvsApp": {
+    "accorde": {
+      "home": {
+        "title": "Accordes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Accorde",
+        "createOrEditLabel": "Créer ou éditer un Accorde",
+        "notFound": "Aucun Accorde trouvé"
+      },
+      "created": "Un nouveau Accorde a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Accorde avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Accorde avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Accorde {{ id }} ?"
+      },
+      "detail": {
+        "title": "Accorde"
+      },
+      "id": "ID",
+      "titre": "Titre",
+      "teritornature": "Teritornature",
+      "statusacord": "Statusacord",
+      "dateAccord": "Date Accord",
+      "signaturereacteru": "Signaturereacteru",
+      "signatureDiircore": "Signature Diircore",
+      "signatureChefEtab": "Signature Chef Etab",
+      "article": "Article",
+      "espaceAcEtEl": "Espace Ac Et El",
+      "etablisemntParten": "Etablisemnt Parten",
+      "etudeAccord": "Etude Accord"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity EtudeAccord.
+    -->
+    <changeSet id="20211030132113-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="espace_ac_et_el_id"
+                                 baseTableName="etude_accord"
+                                 constraintName="fk_etude_accord__espace_ac_et_el_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="espace_ac_et_el"/>
+
+        <addForeignKeyConstraint baseColumnNames="etude_accord_id"
+                                 baseTableName="rel_etude_accord__accorde"
+                                 constraintName="fk_rel_etude_accord__accorde__etude_accord_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="etude_accord"/>
+
+        <addForeignKeyConstraint baseColumnNames="accorde_id"
+                                 baseTableName="rel_etude_accord__accorde"
+                                 constraintName="fk_rel_etude_accord__accorde__accorde_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="accorde"/>
+    </changeSet>
+</databaseChangeLog>

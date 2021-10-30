@@ -1,0 +1,53 @@
+{
+  "name": "DemandElaboration",
+  "fields": [
+    {
+      "fieldName": "typeAccord",
+      "fieldType": "TypeAccord",
+      "fieldValues": "ACCORD,AVENNANT"
+    },
+    {
+      "fieldName": "titreDemand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateDeman",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "formeAccord",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "signaturedircoor",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "espaceAcEtEl",
+      "otherEntityRelationshipName": "demandElaboration",
+      "relationshipName": "espaceAcEtEl",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "etablisemntParten",
+      "otherEntityRelationshipName": "demandElaboration",
+      "relationshipName": "etablisemntParten",
+      "otherEntityField": "nameEtab",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "demand_elaboration",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20211030132112"
+}

@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="etablisemntParten">
+      <h2 data-cy="etablisemntPartenDetailsHeading">
+        <span jhiTranslate="gsacorduvsApp.etablisemntParten.detail.title">Etablisemnt Parten</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisemntParten.contry">Contry</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.contry }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisemntParten.nameEtab">Name Etab</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.nameEtab }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisemntParten.domain">Domain</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.domain }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisemntParten.mention">Mention</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.mention }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.etablisemntParten.representantname">Representantname</span></dt>
+        <dd>
+          <span>{{ etablisemntParten.representantname }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/etablisemnt-parten', etablisemntParten.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

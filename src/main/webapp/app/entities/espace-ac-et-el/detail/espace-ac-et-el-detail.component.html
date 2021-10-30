@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="espaceAcEtEl">
+      <h2 data-cy="espaceAcEtElDetailsHeading"><span jhiTranslate="gsacorduvsApp.espaceAcEtEl.detail.title">Espace Ac Et El</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ espaceAcEtEl.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.espaceAcEtEl.name">Name</span></dt>
+        <dd>
+          <span>{{ espaceAcEtEl.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.espaceAcEtEl.handle">Handle</span></dt>
+        <dd>
+          <span>{{ espaceAcEtEl.handle }}</span>
+        </dd>
+        <dt><span jhiTranslate="gsacorduvsApp.espaceAcEtEl.user">User</span></dt>
+        <dd>
+          <span>{{ espaceAcEtEl.user?.login }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/espace-ac-et-el', espaceAcEtEl.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

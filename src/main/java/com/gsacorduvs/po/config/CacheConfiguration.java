@@ -51,6 +51,18 @@ public class CacheConfiguration {
             createCache(cm, com.gsacorduvs.po.domain.User.class.getName());
             createCache(cm, com.gsacorduvs.po.domain.Authority.class.getName());
             createCache(cm, com.gsacorduvs.po.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.gsacorduvs.po.domain.EtablisemntParten.class.getName());
+            createCache(cm, com.gsacorduvs.po.domain.EtablisemntParten.class.getName() + ".accordes");
+            createCache(cm, com.gsacorduvs.po.domain.EtablisemntParten.class.getName() + ".demandElaborations");
+            createCache(cm, com.gsacorduvs.po.domain.EspaceAcEtEl.class.getName());
+            createCache(cm, com.gsacorduvs.po.domain.Accorde.class.getName());
+            createCache(cm, com.gsacorduvs.po.domain.Accorde.class.getName() + ".etablisemntPartens");
+            createCache(cm, com.gsacorduvs.po.domain.Accorde.class.getName() + ".etudeAccords");
+            createCache(cm, com.gsacorduvs.po.domain.DemandElaboration.class.getName());
+            createCache(cm, com.gsacorduvs.po.domain.DemandElaboration.class.getName() + ".etablisemntPartens");
+            createCache(cm, com.gsacorduvs.po.domain.EtudeAccord.class.getName());
+            createCache(cm, com.gsacorduvs.po.domain.EtudeAccord.class.getName() + ".accordes");
+            createCache(cm, com.gsacorduvs.po.domain.EtablisUser.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

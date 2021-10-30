@@ -1,0 +1,31 @@
+{
+  "gsacorduvsApp": {
+    "etudeAccord": {
+      "home": {
+        "title": "Etude Accords",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Etude Accord",
+        "createOrEditLabel": "Create or edit a Etude Accord",
+        "notFound": "No Etude Accords found"
+      },
+      "created": "A new Etude Accord is created with identifier {{ param }}",
+      "updated": "A Etude Accord is updated with identifier {{ param }}",
+      "deleted": "A Etude Accord is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Etude Accord {{ id }}?"
+      },
+      "detail": {
+        "title": "Etude Accord"
+      },
+      "id": "ID",
+      "titre": "Titre",
+      "dateEtude": "Date Etude",
+      "motiveDirCoor": "Motive Dir Coor",
+      "signaturereacteru": "Signaturereacteru",
+      "signatureDiircore": "Signature Diircore",
+      "signatureChefEtab": "Signature Chef Etab",
+      "espaceAcEtEl": "Espace Ac Et El",
+      "accorde": "Accorde"
+    }
+  }
+}

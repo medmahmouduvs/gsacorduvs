@@ -1,0 +1,30 @@
+{
+  "gsacorduvsApp": {
+    "etablisemntParten": {
+      "home": {
+        "title": "EtablisemntPartens",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Etablisemnt Parten",
+        "createOrEditLabel": "Créer ou éditer un Etablisemnt Parten",
+        "notFound": "Aucun Etablisemnt Parten trouvé"
+      },
+      "created": "Un nouveau Etablisemnt Parten a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Etablisemnt Parten avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Etablisemnt Parten avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Etablisemnt Parten {{ id }} ?"
+      },
+      "detail": {
+        "title": "Etablisemnt Parten"
+      },
+      "id": "ID",
+      "contry": "Contry",
+      "nameEtab": "Name Etab",
+      "domain": "Domain",
+      "mention": "Mention",
+      "representantname": "Representantname",
+      "accorde": "Accorde",
+      "demandElaboration": "Demand Elaboration"
+    }
+  }
+}
