@@ -2,20 +2,20 @@
   "gsacorduvsApp": {
     "etablisUser": {
       "home": {
-        "title": "EtablisUsers",
+        "title": "Employee",
         "refreshListLabel": "Actualiser la liste",
-        "createLabel": "Créer un nouveau Etablis User",
-        "createOrEditLabel": "Créer ou éditer un Etablis User",
+        "createLabel": "Créer un nouveau Employee",
+        "createOrEditLabel": "Créer ou éditer un Employee",
         "notFound": "Aucun Etablis User trouvé"
       },
-      "created": "Un nouveau Etablis User a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Etablis User avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Etablis User avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau Employee a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Employee avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Employeeavec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Etablis User {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le Employee {{ id }} ?"
       },
       "detail": {
-        "title": "Etablis User"
+        "title": "Employee"
       },
       "id": "ID",
       "nome": "Nome",

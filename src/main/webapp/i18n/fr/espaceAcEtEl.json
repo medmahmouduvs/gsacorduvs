@@ -2,20 +2,20 @@
   "gsacorduvsApp": {
     "espaceAcEtEl": {
       "home": {
-        "title": "EspaceAcEtEls",
+        "title": "Espace Des Accords Et Partenaires",
         "refreshListLabel": "Actualiser la liste",
-        "createLabel": "Créer un nouveau Espace Ac Et El",
-        "createOrEditLabel": "Créer ou éditer un Espace Ac Et El",
-        "notFound": "Aucun Espace Ac Et El trouvé"
+        "createLabel": "Créer un nouveau Espace Des Accords Et Partenaires",
+        "createOrEditLabel": "Créer ou éditer un Espace Des Accords Et Partenaires",
+        "notFound": "Aucun Espace Des Accords Et Partenaires trouvé"
       },
-      "created": "Un nouveau Espace Ac Et El a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Espace Ac Et El avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Espace Ac Et El avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau Espace Des Accords Et Partenaires a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Espace Des Accords Et Partenaires avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Espace Des Accords Et Partenaires avec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Espace Ac Et El {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le Espace Des Accords Et Partenaires {{ id }} ?"
       },
       "detail": {
-        "title": "Espace Ac Et El"
+        "title": "Espace Des Accords Et Partenaires"
       },
       "id": "ID",
       "name": "Name",

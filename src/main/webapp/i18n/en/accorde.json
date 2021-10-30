@@ -22,13 +22,13 @@
       "teritornature": "Teritornature",
       "statusacord": "Statusacord",
       "dateAccord": "Date Accord",
-      "signaturereacteru": "Signaturereacteru",
-      "signatureDiircore": "Signature Diircore",
-      "signatureChefEtab": "Signature Chef Etab",
+      "signaturereacteru": "Signaturere du acteru",
+      "signatureDiircore": "Signature du Diircore",
+      "signatureChefEtab": "Signature du Chef Etab",
       "article": "Article",
-      "espaceAcEtEl": "Espace Ac Et El",
-      "etablisemntParten": "Etablisemnt Parten",
-      "etudeAccord": "Etude Accord"
+      "espaceAcEtEl": "Accors and partners",
+      "etablisemntParten": "partners",
+      "etudeAccord": "Etude D'Accord"
     }
   }
 }

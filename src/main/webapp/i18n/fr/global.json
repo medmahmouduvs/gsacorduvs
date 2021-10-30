@@ -6,13 +6,13 @@
       "home": "Accueil",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entités",
-        "etablisemntParten": "Etablisemnt Parten",
-        "espaceAcEtEl": "Espace Ac Et El",
-        "accorde": "Accorde",
-        "demandElaboration": "Demand Elaboration",
-        "etudeAccord": "Etude Accord",
-        "etablisUser": "Etablis User",
+        "main": "Services",
+        "etablisemntParten": "Etablisement Partenaire",
+        "espaceAcEtEl": "Espace Accord Et Elaboration",
+        "accorde": "les Accords ",
+        "demandElaboration": "les Demands D'Elaboration",
+        "etudeAccord": "Etude Des Projet Accords",
+        "etablisUser": "Les Utilsateur",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

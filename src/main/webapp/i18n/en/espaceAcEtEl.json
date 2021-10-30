@@ -2,20 +2,20 @@
   "gsacorduvsApp": {
     "espaceAcEtEl": {
       "home": {
-        "title": "Espace Ac Et Els",
+        "title": "Accords And Partners Space",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Espace Ac Et El",
-        "createOrEditLabel": "Create or edit a Espace Ac Et El",
-        "notFound": "No Espace Ac Et Els found"
+        "createLabel": "Create a new Accords And Partners Space",
+        "createOrEditLabel": "Create or edit a Accords And Partners Space",
+        "notFound": "No Accords And Partners Space found"
       },
-      "created": "A new Espace Ac Et El is created with identifier {{ param }}",
-      "updated": "A Espace Ac Et El is updated with identifier {{ param }}",
-      "deleted": "A Espace Ac Et El is deleted with identifier {{ param }}",
+      "created": "A new Accords And Partners Space is created with identifier {{ param }}",
+      "updated": "A Accords And Partners Space is updated with identifier {{ param }}",
+      "deleted": "A Accords And Partners Space is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Espace Ac Et El {{ id }}?"
+        "question": "Are you sure you want to delete Accords And Partners Space {{ id }}?"
       },
       "detail": {
-        "title": "Espace Ac Et El"
+        "title": "Accords And Partners Space"
       },
       "id": "ID",
       "name": "Name",

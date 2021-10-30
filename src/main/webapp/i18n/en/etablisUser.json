@@ -2,20 +2,20 @@
   "gsacorduvsApp": {
     "etablisUser": {
       "home": {
-        "title": "Etablis Users",
+        "title": "Stuff",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Etablis User",
-        "createOrEditLabel": "Create or edit a Etablis User",
-        "notFound": "No Etablis Users found"
+        "createLabel": "Create a new Employee",
+        "createOrEditLabel": "Create or edit a Employee",
+        "notFound": "No Employee found"
       },
-      "created": "A new Etablis User is created with identifier {{ param }}",
-      "updated": "A Etablis User is updated with identifier {{ param }}",
-      "deleted": "A Etablis User is deleted with identifier {{ param }}",
+      "created": "A new Employee is created with identifier {{ param }}",
+      "updated": "A Employee is updated with identifier {{ param }}",
+      "deleted": "A Employee is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Etablis User {{ id }}?"
+        "question": "Are you sure you want to delete Employee {{ id }}?"
       },
       "detail": {
-        "title": "Etablis User"
+        "title": "Employee"
       },
       "id": "ID",
       "nome": "Nome",

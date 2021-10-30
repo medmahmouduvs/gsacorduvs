@@ -2,29 +2,29 @@
   "gsacorduvsApp": {
     "demandElaboration": {
       "home": {
-        "title": "DemandElaborations",
+        "title": "Demand D'Elaborations",
         "refreshListLabel": "Actualiser la liste",
-        "createLabel": "Créer un nouveau Demand Elaboration",
-        "createOrEditLabel": "Créer ou éditer un Demand Elaboration",
-        "notFound": "Aucun Demand Elaboration trouvé"
+        "createLabel": "Créer un nouveau Demand D'Elaborations",
+        "createOrEditLabel": "Créer ou éditer un Demand D'Elaborations",
+        "notFound": "Aucun Demand D'Elaborations trouvé"
       },
-      "created": "Un nouveau Demand Elaboration a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Demand Elaboration avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Demand Elaboration avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau Demand D'Elaborations a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Demand D'Elaborations avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Demand D'Elaborations avec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Demand Elaboration {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le Demand D'Elaborations {{ id }} ?"
       },
       "detail": {
-        "title": "Demand Elaboration"
+        "title": "Demand D'Elaborations"
       },
       "id": "ID",
       "typeAccord": "Type Accord",
-      "titreDemand": "Titre Demand",
-      "dateDeman": "Date Deman",
-      "formeAccord": "Forme Accord",
-      "signaturedircoor": "Signaturedircoor",
-      "espaceAcEtEl": "Espace Ac Et El",
-      "etablisemntParten": "Etablisemnt Parten"
+      "titreDemand": "Titre Du Demande",
+      "dateDeman": "Date Demande",
+      "formeAccord": "Forme D'Accord",
+      "signaturedircoor": "Signature du Dircoor",
+      "espaceAcEtEl": "Espace Des Accords Et Partenaires",
+      "etablisemntParten": "Etablisement Partenaires"
     }
   }
 }

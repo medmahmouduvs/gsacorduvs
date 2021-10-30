@@ -2,27 +2,27 @@
   "gsacorduvsApp": {
     "etablisemntParten": {
       "home": {
-        "title": "EtablisemntPartens",
+        "title": "Etablisement Partenaires",
         "refreshListLabel": "Actualiser la liste",
-        "createLabel": "Créer un nouveau Etablisemnt Parten",
-        "createOrEditLabel": "Créer ou éditer un Etablisemnt Parten",
-        "notFound": "Aucun Etablisemnt Parten trouvé"
+        "createLabel": "Créer un nouveau Etablisement Partenaires",
+        "createOrEditLabel": "Créer ou éditer un Etablisement Partenaires",
+        "notFound": "Aucun Etablisement Partenaires trouvé"
       },
-      "created": "Un nouveau Etablisemnt Parten a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Etablisemnt Parten avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Etablisemnt Parten avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau Etablisement Partenaires a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Etablisement Partenaires avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Etablisement Partenaires avec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Etablisemnt Parten {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le Etablisement Partenaires {{ id }} ?"
       },
       "detail": {
-        "title": "Etablisemnt Parten"
+        "title": "Etablisement Partenaires"
       },
       "id": "ID",
-      "contry": "Contry",
-      "nameEtab": "Name Etab",
+      "contry": "Pays",
+      "nameEtab": "Nome D'Etablisement",
       "domain": "Domain",
       "mention": "Mention",
-      "representantname": "Representantname",
+      "representantname": "nom du Representant",
       "accorde": "Accorde",
       "demandElaboration": "Demand Elaboration"
     }

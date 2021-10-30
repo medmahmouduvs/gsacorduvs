@@ -2,30 +2,30 @@
   "gsacorduvsApp": {
     "etudeAccord": {
       "home": {
-        "title": "EtudeAccords",
+        "title": "Etude D'Accords",
         "refreshListLabel": "Actualiser la liste",
-        "createLabel": "Créer un nouveau Etude Accord",
+        "createLabel": "Créer un nouveau Etude D'Accords",
         "createOrEditLabel": "Créer ou éditer un Etude Accord",
-        "notFound": "Aucun Etude Accord trouvé"
+        "notFound": "Aucun Etude D'Accords trouvé"
       },
-      "created": "Un nouveau Etude Accord a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Etude Accord avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Etude Accord avec l'identifiant {{ param }} a été supprimé",
+      "created": "Un nouveau Etude D'Accords a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Etude D'Accords avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Etude D'Accords avec l'identifiant {{ param }} a été supprimé",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Etude Accord {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer le Etude D'Accords {{ id }} ?"
       },
       "detail": {
-        "title": "Etude Accord"
+        "title": "Etude D'Accords"
       },
       "id": "ID",
       "titre": "Titre",
       "dateEtude": "Date Etude",
-      "motiveDirCoor": "Motive Dir Coor",
-      "signaturereacteru": "Signaturereacteru",
-      "signatureDiircore": "Signature Diircore",
-      "signatureChefEtab": "Signature Chef Etab",
-      "espaceAcEtEl": "Espace Ac Et El",
-      "accorde": "Accorde"
+      "motiveDirCoor": "Motive du Dir Coor",
+      "signaturereacteru": "Signature du reacteru",
+      "signatureDiircore": "Signature du Diircore",
+      "signatureChefEtab": "Signature du Chef Etab",
+      "espaceAcEtEl": "Espace D'Accord Et Etablisement",
+      "accorde": "Accord"
     }
   }
 }
